@@ -1,0 +1,37 @@
+{% extends 'layouts/master.html' %}
+{% block title %}The Planner{% endblock %}
+{% block body %}
+<h1>The Planner - Assignments</h1>
+<tbody>
+    {% for k in x %}
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ k }}">{{ data[k][0][0] }}</a>
+                    
+                </h4>
+            </div>
+            {% if data[k]|length > 1 %}
+                <div id="collapse{{ k }}" class="panel-collapse collapse">
+                    {% for a in range(data[k]|length) %}
+                        <div class="panel-body">{{ data[k][a][1] }}</div>
+                        <div class="panel-footer">{{ data[k][a][2] }}</div>
+                    {% endfor %}
+                </div>
+            {% else %}
+            <div id="collapse{{ k }}" class="panel-collapse collapse">
+                <div class="panel-body">{{ data[k][0][1] }}</div>
+                <div class="panel-footer">{{ data[k][0][2] }}</div>
+            </div>
+            {% endif %}
+            
+            
+            
+        </div>
+    </div>
+    {% endfor %}
+    
+</tbody>
+{% endblock %}
