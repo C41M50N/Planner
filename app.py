@@ -25,6 +25,9 @@ def index():
 
 @app.route("/planner")
 def planner():
+    '''
+    Planner Page
+    '''
     data = {}
     assignments = Assignment.query.order_by(Assignment.assignmtDate).all()
     for assignment in assignments:
