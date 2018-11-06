@@ -20,6 +20,10 @@ def index():
     '''
     Home page
     '''
+
+    #! IF datetime.date is 2 days ago
+        #! Delete it
+        
     return redirect(url_for('planner'))
     #return redirect(url_for('planner'))
 

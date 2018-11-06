@@ -1,0 +1,6 @@
+Remove Assignment 2 two days after Due date has passed
+Color Coded:
+    First  Assignment  : red
+    Next   Assignment  : yellow
+    Next   Assignment  : green
+    Latter Assignments : blue
